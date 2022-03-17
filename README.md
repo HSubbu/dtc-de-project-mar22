@@ -19,8 +19,12 @@ You are hired as consulatant Data Engineer by Florida Health Department. The Man
 ## DATA DESCRIPTION
 
 The data is to be pulled from an API of website https://apidocs.covidactnow.org using an API KEY. The details of dataset is available in following document
-[a link]()
+[link](https://github.com/HSubbu/dtc-de-project-mar22/blob/main/data-description.pdf)
 
-## PROJECT DATA PIPELINE DESIGN 
+## OUTLINE OF PROPOSED DATA PIPELINE 
+
+Given the requirements in the problem statement , broad solution envisaged is to use GCP tools to pull the data , put the data in a data lake , pull the data and transform using an internal GCP pipeline (Google Data Fusion ) and ingest into tables in Big Query . From the tables in BQ , we can load the data into Google Data Studio to create Dashboards . It is also proposed to run additional quries in BQ (scheduled queries) to create additional tables/views so that the data from these tables can be loaded to Google Data Studio for visualisations as required. To automate the loading of data into data lake , Google Cloud Scheduler can be used to trigger the cloud function . The historic data can be pulled from API once using a separate Google Cloud Function as it an one time event. The link to Dashboard can be shared with Management in Health Department for their access. 
+
+## PROJECT DATA PIPELINE DESIGN ![image](https://user-images.githubusercontent.com/30765337/158906702-1e4353b3-ce18-48dc-9187-04a32a987621.png)
 
 ![alt text](https://github.com/HSubbu/dtc-de-project-mar22/blob/main/dtc-de-project.png)

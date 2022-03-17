@@ -28,3 +28,5 @@ Given the requirements in the problem statement , broad solution envisaged is to
 ## PROJECT DATA PIPELINE DESIGN ![image](https://user-images.githubusercontent.com/30765337/158906702-1e4353b3-ce18-48dc-9187-04a32a987621.png)
 
 ![alt text](https://github.com/HSubbu/dtc-de-project-mar22/blob/main/dtc-de-project.png)
+
+## DATA INGESTION 

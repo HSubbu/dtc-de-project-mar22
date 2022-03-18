@@ -33,3 +33,5 @@ Given the requirements in the problem statement , broad solution envisaged is to
 The Data ingestion part of pipeline consists of scheduled pulling of data from API (both historical and daily updates) at 1600 hours every day (daily data is expected to be updated every daya around noon EST). A storage bucket has been created in GCS . A Google Cloud Function and Google Cloud Schduler together will pull the data from API and put in GCS Bucket. 
 
 The detailed documentation for data ingestion part is given in this
+
+https://loom.com/share/55355ddbd91b4cf980e8a9584117f03c 

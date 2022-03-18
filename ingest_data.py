@@ -20,8 +20,8 @@ def export_data(request):
     blob = bucket.blob(destination_blob_name)
     blob.upload_from_string(data, content_type='text/csv')
   
-  upload_blob('de-project-test', csv_str_hist, 'hist-data-' + str(datetime.date.today()) + '.csv')
-  upload_blob('de-project-test', csv_str_current, 'current-data-' + str(datetime.date.today()) + '.csv')
+  upload_blob('de-project-data', csv_str_hist, 'hist-data-' + str(datetime.date.today()) + '.csv')
+  upload_blob('de-project-data', csv_str_current, 'current-data-' + str(datetime.date.today()) + '.csv')
 
   return 'Job Completed'
 

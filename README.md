@@ -23,10 +23,13 @@ The data is to be pulled from an API of website https://apidocs.covidactnow.org 
 
 ## OUTLINE OF PROPOSED DATA PIPELINE 
 
-Given the requirements in the problem statement , broad solution envisaged is to use GCP tools to pull the data , put the data in a data lake , pull the data and transform using an internal GCP pipeline (Google Data Fusion ) and ingest into tables in Big Query . From the tables in BQ , we can load the data into Google Data Studio to create Dashboards . It is also proposed to run additional quries in BQ (scheduled queries) to create additional tables/views so that the data from these tables can be loaded to Google Data Studio for visualisations as required. To automate the loading of data into data lake , Google Cloud Scheduler can be used to trigger the cloud function . The historic data can be pulled from API once using a separate Google Cloud Function as it an one time event. The link to Dashboard can be shared with Management in Health Department for their access. 
+Given the requirements in the problem statement , broad solution envisaged is to use GCP tools to pull the data(both historical and daily data ) from API, put the data in a data lake , pull the data and transform using an internal GCP pipeline (Google Data Fusion ) and ingest into tables in Big Query . From the tables in BQ , we can load the data into Google Data Studio to create Dashboards . It is also proposed to run additional quries in BQ (scheduled queries) to create additional tables/views so that the data from these tables can be loaded to Google Data Studio for visualisations as required. To automate the loading of data into data lake , Google Cloud Scheduler can be used to trigger the cloud function . The link to Dashboard can be shared with Management in Health Department for their access. 
 
-## PROJECT DATA PIPELINE DESIGN ![image](https://user-images.githubusercontent.com/30765337/158906702-1e4353b3-ce18-48dc-9187-04a32a987621.png)
+## PROJECT DATA PIPELINE DESIGN 
 
 ![alt text](https://github.com/HSubbu/dtc-de-project-mar22/blob/main/dtc-de-project.png)
 
 ## DATA INGESTION 
+The Data ingestion part of pipeline consists of scheduled pulling of data from API (both historical and daily updates) at 1600 hours every day (daily data is expected to be updated every daya around noon EST). A storage bucket has been created in GCS . A Google Cloud Function and Google Cloud Schduler together will pull the data from API and put in GCS Bucket. 
+
+The detailed documentation for data ingestion part is given in this

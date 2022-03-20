@@ -37,3 +37,7 @@ The detailed documentation for data ingestion part is given in this
 Creating GCS bucket video link https://loom.com/share/55355ddbd91b4cf980e8a9584117f03c 
 
 Creating a service account https://www.loom.com/share/a832ec5c8e364261a569fcd2d99ffdf9
+
+Create a cloud Function for data ingestion https://www.loom.com/share/9ff420fbb7d941fb81a58d7bce8eed57
+
+

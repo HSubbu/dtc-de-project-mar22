@@ -42,6 +42,6 @@ Create a cloud Function for data ingestion https://www.loom.com/share/9ff420fbb7
 
 Local testing of Cloud Function https://www.loom.com/share/e9b62bf6551d4147b89c36348c3808a5
 
-
+Creata cloud scheduler https://www.loom.com/share/e06f13c657714eb588c7512790dd2652
 
 

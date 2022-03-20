@@ -35,3 +35,5 @@ The Data ingestion part of pipeline consists of scheduled pulling of data from A
 The detailed documentation for data ingestion part is given in this
 
 https://loom.com/share/55355ddbd91b4cf980e8a9584117f03c 
+
+Creating a service account https://www.loom.com/share/a832ec5c8e364261a569fcd2d99ffdf9

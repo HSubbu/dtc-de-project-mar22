@@ -40,4 +40,8 @@ Creating a service account https://www.loom.com/share/a832ec5c8e364261a569fcd2d9
 
 Create a cloud Function for data ingestion https://www.loom.com/share/9ff420fbb7d941fb81a58d7bce8eed57
 
+Local testing of Cloud Function https://www.loom.com/share/e9b62bf6551d4147b89c36348c3808a5
+
+
+
 

@@ -44,4 +44,16 @@ Local testing of Cloud Function https://www.loom.com/share/e9b62bf6551d4147b89c3
 
 Creata cloud scheduler https://www.loom.com/share/e06f13c657714eb588c7512790dd2652
 
+## ETL PIPELINE 
 
+## DASHBOARD
+
+## CONCLUSION
+
+## REFERNCES
+
+Using Cloud Function for Data Ingstionhttps://www.ternarydata.com/news/use-python-and-google-cloud-to-schedule-a-file-download-and-load-into-bigquery-3p3aw
+
+Using Data Fusion for ETL. https://codelabs.developers.google.com/codelabs/batch-csv-cdf-bq#0
+
+Using Data Fusion for ETL https://www.youtube.com/watch?v=1QhJDsYQTfM 

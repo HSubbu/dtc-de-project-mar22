@@ -1,0 +1,43 @@
+import wget 
+
+
+
+
+from google.cloud import storage
+import os
+Import wget
+
+def export_data(request):
+  API_KEY = os.environ.get('API_KEY')
+  HIST_URL = 'https://api.covidactnow.org/v2/states.timeseries.csv?apiKey='+API_KEY
+  CURRENT_URL = 'https://api.covidactnow.org/v2/states.csv?apiKey='+API_KEY
+  bucket_name = 'de-project-bucket' #without gs://
+  file_name_hist = 'hist_data.csv'
+  cf_path_hist = '/tmp/{}'.format(file_name_hist)
+  file_name_current = 'current_data.csv'
+  cf_path_current = '/tmp/{}'.format(file_name_current)
+
+
+
+  # Then, upload it to cloud storage
+  def upload_blob(bucket_name,url,cf_path,file_name):
+
+    # set storage client
+    client = storage.Client()
+    # get bucke
+    bucket = client.get_bucket(bucket_name)
+    # download the file to Cloud Function's tmp directory
+    wget.download(url, cf_path)
+    # set Blob
+    blob = storage.Blob(file_name, bucket)
+    # upload the file to GC
+    blob.upload_from_filename(cf_path)
+
+  upload_blob(bucket_name,HIST_URL,cf_path_hist,file_name_hist)
+  upload_blob(bucket_name,CURRENT_URL,cf_path_current,file_name_current)
+  
+  
+
+  return 'Job Completed'
+
+

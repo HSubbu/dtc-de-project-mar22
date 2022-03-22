@@ -57,3 +57,5 @@ Using Cloud Function for Data Ingstionhttps://www.ternarydata.com/news/use-pytho
 Using Data Fusion for ETL. https://codelabs.developers.google.com/codelabs/batch-csv-cdf-bq#0
 
 Using Data Fusion for ETL https://www.youtube.com/watch?v=1QhJDsYQTfM 
+
+Using Data Fusion for ETL with Join Current data and historic data https://blog.pythian.com/join-group-by-and-aggregate-in-cloud-data-fusion/

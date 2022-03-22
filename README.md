@@ -30,7 +30,7 @@ Given the requirements in the problem statement , broad solution envisaged is to
 ![alt text](https://github.com/HSubbu/dtc-de-project-mar22/blob/main/dtc-de-project.png)
 
 ## DATA INGESTION 
-The Data ingestion part of pipeline consists of scheduled pulling of COVID19 data from API (both historical and daily updates) at 1400 hours every day (daily data is expected to be updated every daya around noon EST). A storage bucket has been created in GCS . A Google Cloud Function and Google Cloud Schduler together will pull the data from API and put in GCS Bucket. A python script has been used in Google Cloud Function .  The historic and current data has also been merged to ingest a combined data into the bucket for further transformation and processing. The python script used in Cloud Function is https://github.com/HSubbu/dtc-de-project-mar22/blob/main/ingest_data.txt 
+The Data ingestion part of pipeline consists of scheduled pulling of COVID19 data from API (both historical and daily updates) at 1400 hours every day (daily data is expected to be updated every daya around noon EST). A storage bucket has been created in GCS . A Google Cloud Function and Google Cloud Schduler together will pull the data from API and put in GCS Bucket. A python script has been used in Google Cloud Function .  The historic and current data has also been merged to ingest a combined data (using the python script in GCF)into the bucket for further transformation and processing. The python script used in Cloud Function is https://github.com/HSubbu/dtc-de-project-mar22/blob/main/ingest_data.txt 
 
 The detailed documentation for data ingestion part is given in this https://github.com/HSubbu/dtc-de-project-mar22/blob/main/data-ingestion.pdf
 

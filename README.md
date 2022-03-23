@@ -59,3 +59,5 @@ Using Data Fusion for ETL. https://codelabs.developers.google.com/codelabs/batch
 Using Data Fusion for ETL https://www.youtube.com/watch?v=1QhJDsYQTfM 
 
 Using Data Fusion for ETL with Join Current data and historic data https://blog.pythian.com/join-group-by-and-aggregate-in-cloud-data-fusion/
+
+Using Data Studio for visualisation https://codelabs.developers.google.com/codelabs/bigquery-data-studio#2

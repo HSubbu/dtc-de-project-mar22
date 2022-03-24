@@ -19,7 +19,7 @@ You are hired as consulatant Data Engineer by Florida Health Department. The Man
 ## DATA DESCRIPTION
 
 The data is to be pulled from an API of website https://apidocs.covidactnow.org using an API KEY. The details of dataset is available in following document
-[link](https://github.com/HSubbu/dtc-de-project-mar22/blob/main/data-description.pdf)
+[link](https://github.com/HSubbu/dtc-de-project-mar22/blob/main/dtc-de-project.png)
 
 ## OUTLINE OF PROPOSED DATA PIPELINE 
 

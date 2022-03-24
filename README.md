@@ -55,6 +55,18 @@ The tables in BQ has been used as input data to GOOGLE DATA STUDIO to create Das
 The detailed documentation for the Dashboard creatiion is ..
 ## CONCLUSION
 
+## AREAS FOR IMPROVEMENT
+
+This project is academic in nature and is an attempt to put into practice learnings from DataTalksClub DE Zoomcamp. There is scope to improve the project to achieve improved performance . Following areas are identified as areas of improvement :
+
+  (a) The cost optimatization of GCP platform with current dataflow plipeline ( I havent worked much towards cost optimization and identify areas for improvement)
+  
+  (b) Try out more transformation in ETL to achieve better data output 
+  
+  (c) Identify more metrics (critical ones ) for incorporation in dashboard
+  
+  (d) CI/CD pipeline of testing (I have manually tested the pipeline , automated testing is way to go !)
+
 ## REFERNCES
 
 Using Cloud Function for Data Ingstionhttps://www.ternarydata.com/news/use-python-and-google-cloud-to-schedule-a-file-download-and-load-into-bigquery-3p3aw

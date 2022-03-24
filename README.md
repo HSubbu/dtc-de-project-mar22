@@ -54,7 +54,7 @@ The tables in BQ has been used as input data to GOOGLE DATA STUDIO to create Das
 
 The detailed documentation for the Dashboard creatiion is ..
 
-
+Dashboard tileone [link](https://github.com/HSubbu/dtc-de-project-mar22/blob/main/dashboard_tile1.png)
 ## CONCLUSION
 
 ## AREAS FOR IMPROVEMENT

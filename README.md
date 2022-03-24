@@ -45,6 +45,9 @@ Local testing of Cloud Function https://www.loom.com/share/e9b62bf6551d4147b89c3
 Creata cloud scheduler https://www.loom.com/share/e06f13c657714eb588c7512790dd2652
 
 ## ETL PIPELINE 
+The data in GCS bucket needs to be further loaded into DWH after minimum data transformation. GCP tool called DATA FUSION was adopted for the ETL process. The Data Fusion has UI which can pull the data from GCS and carry our basic transformation and load data as BQ table . In addition, these pipeline execution can be scheduled to run at specified intervals everyday. I am ingesting the data at 1400 hours everyday. Hence the pileine is scheduled to run at 1500 hours everyday. There are two data pipelines running simultaeneously , once for the current data and one for historic data. 
+
+Detailed documentation of ETL pipeline is given ..
 
 ## DASHBOARD
 

@@ -53,6 +53,8 @@ Detailed documentation of ETL pipeline is given ..
 The tables in BQ has been used as input data to GOOGLE DATA STUDIO to create Dashboards. The Dashboards presents two pages/tiles . One for current data and once giving historical perspective(since the time pandemic started) . The dashboards get updated when the tables get updated by the pipeline. 
 
 The detailed documentation for the Dashboard creatiion is ..
+
+
 ## CONCLUSION
 
 ## AREAS FOR IMPROVEMENT

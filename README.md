@@ -47,7 +47,7 @@ Creata cloud scheduler https://www.loom.com/share/e06f13c657714eb588c7512790dd26
 ## ETL PIPELINE 
 The data ingestion puts the data into GCS bucket everyday at 1400 hrs . The data in GCS bucket needs to be further loaded into DWH(our case Big Query) after some data transformation. GCP tool called DATA FUSION was adopted for the ETL process. The Data Fusion has UI which can pull the data from GCS and carry our basic transformation and load data as BQ table . The transformation consists of dropping some columns which has irrelavant data , parsing dat as datetime and filling na values. In addition, these pipeline execution can be scheduled to run at specified intervals everyday. I am ingesting the data at 1400 hours everyday. Hence the pileine is scheduled to run at 1500 hours everyday. There are two data pipelines running simultaeneously , once for the current data and one for combined data. The pipeline ingests two tables in BQ , current_data and combined_data . 
 
-Detailed documentation of ETL pipeline is given [link]()
+Detailed documentation of ETL pipeline is given [link](https://github.com/HSubbu/dtc-de-project-mar22/blob/main/data_transformation_cloud_datafusion.pdf)
 
 The ETL in Google Data Fusion is as shown [link[(https://github.com/HSubbu/dtc-de-project-mar22/blob/main/etl_data_fusion.png)
 

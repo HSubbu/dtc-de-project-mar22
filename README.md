@@ -16,6 +16,10 @@ Select a dataset that
 
 You are hired as consulatant Data Engineer by Florida Health Department. The Management of Health Department would like to monitor the status of COVID 19 across US states on a daily basis with special emphasis on state of Florida. There is a need to identify risk levels across the states on a daily basis in terms of critical metrics and visuals on a dashboard . The Data Engineer may prepare monitoring metrics from the information available in the data. The historic and daily data can be pulled from an API https://apidocs.covidactnow.org using an API key. For the sake of keeping the data pipeline simple only data related to US states have been considered for processing the pipeline. The Department of Health has a billed account in Google Cloud Platform(GCP) and solutions worked out could include either open source tools or GCP tools . The pipeline needs to be automated for daily updation of dashboard. 
 
+A short video highlighting the data pipeline with individual components https://www.loom.com/share/3b7bc9109c5c48699e47057959aff9d9
+
+A short video highlighting manual testing of pipeline 
+
 ## DATA DESCRIPTION
 
 The data is to be pulled from an API of website https://apidocs.covidactnow.org using an API KEY. The details of dataset is available in following document
@@ -34,15 +38,6 @@ The Data ingestion part of pipeline consists of scheduled pulling of COVID19 dat
 
 The detailed documentation for data ingestion part is given in this [link](https://github.com/HSubbu/dtc-de-project-mar22/blob/main/data-ingestion.pdf)
 
-Creating GCS bucket video link https://loom.com/share/55355ddbd91b4cf980e8a9584117f03c 
-
-Creating a service account https://www.loom.com/share/a832ec5c8e364261a569fcd2d99ffdf9
-
-Create a cloud Function for data ingestion https://www.loom.com/share/9ff420fbb7d941fb81a58d7bce8eed57
-
-Local testing of Cloud Function https://www.loom.com/share/e9b62bf6551d4147b89c36348c3808a5
-
-Creata cloud scheduler https://www.loom.com/share/e06f13c657714eb588c7512790dd2652
 
 ## ETL PIPELINE 
 The data ingestion puts the data into GCS bucket everyday at 1400 hrs . The data in GCS bucket needs to be further loaded into DWH(our case Big Query) after some data transformation. GCP tool called DATA FUSION was adopted for the ETL process. The Data Fusion has UI which can pull the data from GCS and carry our basic transformation and load data as BQ table . The transformation consists of dropping some columns which has irrelavant data , parsing dat as datetime and filling na values. In addition, these pipeline execution can be scheduled to run at specified intervals everyday. I am ingesting the data at 1400 hours everyday. Hence the pileine is scheduled to run at 1500 hours everyday. There are two data pipelines running simultaeneously , once for the current data and one for combined data. The pipeline ingests two tables in BQ , current_data and combined_data . 

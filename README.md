@@ -30,7 +30,7 @@ Given the requirements in the problem statement , broad solution envisaged is to
 ![alt text](https://github.com/HSubbu/dtc-de-project-mar22/blob/main/dtc-de-project.png)
 
 ## DATA INGESTION 
-The Data ingestion part of pipeline consists of scheduled pulling of COVID19 data from the API (both historical and daily updates) at 1400 hours every day (daily data is expected to be updated every day around noon EST). A storage bucket has been created in GCS . A Google Cloud Function and Google Cloud Schduler together will pull the data from API and put in GCS Bucket. A python script has been used in Google Cloud Function .  The historic and current data has also been merged to ingest a combined data (using the python script in GCF)into the bucket for further transformation and processing. The python script used in Cloud Function is https://github.com/HSubbu/dtc-de-project-mar22/blob/main/ingest_data.txt 
+The Data ingestion part of pipeline consists of scheduled pulling of COVID19 data from the API (both historical and daily updates) at 1400 hours every day (daily data is expected to be updated every day around noon EST). A storage bucket has been created in GCS . A Google Cloud Function and Google Cloud Scheduler together will pull the data from API and put in GCS Bucket. A python script has been used in Google Cloud Function .  The historic and current data has also been merged to ingest a combined data (using the python script in GCF)into the bucket for further transformation and processing. The python script used in Cloud Function is https://github.com/HSubbu/dtc-de-project-mar22/blob/main/ingest_data.txt 
 
 The detailed documentation for data ingestion part is given in this [link](https://github.com/HSubbu/dtc-de-project-mar22/blob/main/data-ingestion.pdf)
 
@@ -45,9 +45,11 @@ Local testing of Cloud Function https://www.loom.com/share/e9b62bf6551d4147b89c3
 Creata cloud scheduler https://www.loom.com/share/e06f13c657714eb588c7512790dd2652
 
 ## ETL PIPELINE 
-The data ingestion puts the data into GCS bucket everyday at 1400 hrs . The data in GCS bucket needs to be further loaded into DWH(our case Big Query) after some data transformation. GCP tool called DATA FUSION was adopted for the ETL process. The Data Fusion has UI which can pull the data from GCS and carry our basic transformation and load data as BQ table . In addition, these pipeline execution can be scheduled to run at specified intervals everyday. I am ingesting the data at 1400 hours everyday. Hence the pileine is scheduled to run at 1500 hours everyday. There are two data pipelines running simultaeneously , once for the current data and one for historic data. 
+The data ingestion puts the data into GCS bucket everyday at 1400 hrs . The data in GCS bucket needs to be further loaded into DWH(our case Big Query) after some data transformation. GCP tool called DATA FUSION was adopted for the ETL process. The Data Fusion has UI which can pull the data from GCS and carry our basic transformation and load data as BQ table . The transformation consists of dropping some columns which has irrelavant data , parsing dat as datetime and filling na values. In addition, these pipeline execution can be scheduled to run at specified intervals everyday. I am ingesting the data at 1400 hours everyday. Hence the pileine is scheduled to run at 1500 hours everyday. There are two data pipelines running simultaeneously , once for the current data and one for combined data. The pipeline ingests two tables in BQ , current_data and combined_data . 
 
-Detailed documentation of ETL pipeline is given ..
+Detailed documentation of ETL pipeline is given [link]()
+
+The ETL in Google Data Fusion is as shown [link[(https://github.com/HSubbu/dtc-de-project-mar22/blob/main/etl_data_fusion.png)
 
 ## DASHBOARD
 The tables in BQ has been used as input data to GOOGLE DATA STUDIO to create Dashboards. The Dashboards presents two pages/tiles . One for current data and once giving historical perspective(since the time pandemic started) . The dashboards get updated when the tables get updated by the pipeline. 

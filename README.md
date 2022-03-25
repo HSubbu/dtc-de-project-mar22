@@ -16,9 +16,9 @@ Select a dataset that
 
 You are hired as consulatant Data Engineer by Florida Health Department. The Management of Health Department would like to monitor the status of COVID 19 across US states on a daily basis with special emphasis on state of Florida. There is a need to identify risk levels across the states on a daily basis in terms of critical metrics and visuals on a dashboard . The Data Engineer may prepare monitoring metrics from the information available in the data. The historic and daily data can be pulled from an API https://apidocs.covidactnow.org using an API key. For the sake of keeping the data pipeline simple only data related to US states have been considered for processing the pipeline. The Department of Health has a billed account in Google Cloud Platform(GCP) and solutions worked out could include either open source tools or GCP tools . The pipeline needs to be automated for daily updation of dashboard. 
 
-A short video highlighting the data pipeline with individual components https://www.loom.com/share/3b7bc9109c5c48699e47057959aff9d9
+A short video highlighting the data pipeline with individual components [link to video]https://www.loom.com/share/3b7bc9109c5c48699e47057959aff9d9
 
-A short video highlighting manual testing of pipeline 
+A short video highlighting manual testing of pipeline [link to video]https://www.loom.com/share/b515e45bfaf14f18966c3ba275722c7b
 
 ## DATA DESCRIPTION
 

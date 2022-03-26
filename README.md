@@ -49,7 +49,8 @@ The ETL in Google Data Fusion is as shown [link](https://github.com/HSubbu/dtc-d
 ## DASHBOARD
 The tables in BQ has been used as input data to GOOGLE DATA STUDIO to create Dashboards. The Dashboards presents two pages/tiles . One for current data and once giving historical perspective(since the time pandemic started) . The dashboards get updated when the tables get updated by the pipeline. 
 
-The detailed documentation for the Dashboard creatiion is in [link]{https://github.com/HSubbu/dtc-de-project-mar22/blob/main/data_transformation_cloud_datafusion.pdf)
+The detailed documentation for the Dashboard creatiion is in 
+[link]{https://github.com/HSubbu/dtc-de-projectmar22/blob/main/data_transformation_cloud_datafusion.pdf)
 
 Dashboard tile one layout [link](https://github.com/HSubbu/dtc-de-project-mar22/blob/main/dashboard_tile1.png)
 

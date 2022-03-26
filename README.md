@@ -44,7 +44,7 @@ The data ingestion puts the data into GCS bucket everyday at 1400 hrs . The data
 
 Detailed documentation of ETL pipeline is given [link](https://github.com/HSubbu/dtc-de-project-mar22/blob/main/data_transformation_cloud_datafusion.pdf)
 
-The ETL in Google Data Fusion is as shown [link[(https://github.com/HSubbu/dtc-de-project-mar22/blob/main/etl_data_fusion.png)
+The ETL in Google Data Fusion is as shown [link](https://github.com/HSubbu/dtc-de-project-mar22/blob/main/etl_data_fusion.png)
 
 ## DASHBOARD
 The tables in BQ has been used as input data to GOOGLE DATA STUDIO to create Dashboards. The Dashboards presents two pages/tiles . One for current data and once giving historical perspective(since the time pandemic started) . The dashboards get updated when the tables get updated by the pipeline. 
